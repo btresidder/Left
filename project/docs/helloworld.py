@@ -1,5 +1,5 @@
 from docutils import nodes
-from docutils.parser.rst import Directive
+from docutils.parsers.rst import Directive
 
 class HelloWorld(Directive):
 
