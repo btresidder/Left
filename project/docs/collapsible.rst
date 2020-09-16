@@ -9,7 +9,7 @@ Below is an attempt at making a collapsible box.
 .. raw:: html
 
    <details>
-   <summary><h2>This heading is in H2</h2></summary>
+   <summary><h4>This heading is in H4</h4></summary>
    <p>This is a bunch of text I have written.</p>
    </details>
 
