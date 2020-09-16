@@ -14,3 +14,22 @@ Below is an attempt at making a collapsible box.
    </details>
 
 Here is some more text outside of the collapsible to see what it will do.
+
+.. raw:: html
+
+   <details>
+   <summary>Here is a box that has some regular rst inside it</summary>
+
+This is a standard rst sentence.
+
+.. code-block:: python
+
+   print("hello world")
+
+this is outside the code block.
+
+.. raw:: html
+
+   </details>
+
+this is below the collapsible
