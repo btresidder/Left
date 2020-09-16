@@ -34,4 +34,10 @@ this is outside the code block.
 
 
 
-this is below the collapsible
+this is below the collapsible.
+
+below this is a call to the hello world extension:
+
+.. helloworld::
+
+this is after the extension call
