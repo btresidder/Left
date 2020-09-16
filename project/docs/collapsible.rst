@@ -41,3 +41,8 @@ below this is a call to the hello world extension:
 .. helloworld::
 
 this is after the extension call
+below is a call to the collapsible extension:
+
+.. collapsible::
+
+this is after the extension call
