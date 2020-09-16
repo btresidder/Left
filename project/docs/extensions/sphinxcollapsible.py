@@ -5,6 +5,8 @@ class Collapsible(Directive):
 
     def run(self):
         paragraph_node = nodes.paragraph(text='</p><h1>hello world<h1><p>')
+        html_node = """<b>This Worked</b>"""
+        self.body.append(html_node)
         return [paragraph_node]
 
 def setup(app):
