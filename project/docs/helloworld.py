@@ -5,7 +5,7 @@ class HelloWorld(Directive):
 
     def run(self):
         paragraph_node = nodes.paragraph(text='Hello World!')
-        resturn [paragraph_node]
+        return [paragraph_node]
 
 def setup(app):
     app.add_directive("helloworld", HelloWorld)
