@@ -9,7 +9,7 @@ Below is an attempt at making a collapsible box.
 .. raw:: html
 
    <details>
-   <summary><a>Press here to open box</a></summary>
+   <summary><h2>This heading is in H2</h2></summary>
    <p>This is a bunch of text I have written.</p>
    </details>
 
@@ -31,5 +31,7 @@ this is outside the code block.
 .. raw:: html
 
    </details>
+
+
 
 this is below the collapsible
