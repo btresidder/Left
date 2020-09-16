@@ -4,7 +4,7 @@ from docutils.parsers.rst import Directive
 class Collapsible(Directive):
 
     def run(self):
-        paragraph_node = nodes.paragraph(text='<h1>hello world<h1>')
+        paragraph_node = nodes.paragraph(text='</p><h1>hello world<h1><p>')
         return [paragraph_node]
 
 def setup(app):
