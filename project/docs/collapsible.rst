@@ -9,7 +9,7 @@ Below is an attempt at making a collapsible box.
 .. raw:: html
 
    <details>
-   <summary<a>Press here to open box</a></summary>
+   <summary><a>Press here to open box</a></summary>
    <p>This is a bunch of text I have written.</p>
    </details>
 
