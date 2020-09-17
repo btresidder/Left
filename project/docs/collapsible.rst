@@ -9,6 +9,9 @@ Below is a collapsible box created by an extension.
 .. collapsible::
    :title: This is the title
 
+   Sub Heading
+   ===========
+
    This is some regular text inside the collapsible
 
    .. code-block:: python
