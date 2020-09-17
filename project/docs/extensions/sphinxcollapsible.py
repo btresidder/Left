@@ -46,7 +46,7 @@ def visit_collapsible_html(self, node):
 
     # Collapsible is made with <details> tags
     # The title is represented in <summary> tags
-    code = """<details><summary><b>"""
+    code = """<details style="margin:20px;"><summary><b>"""
     code += options["title"]
     code += """</b></summary>"""
     self.body.append(code)
