@@ -45,5 +45,7 @@ below is a call to the collapsible extension:
 
 .. collapsible::
    :title: This is the title
+   This is some text inside the collapsible
+
 
 this is after the extension call
