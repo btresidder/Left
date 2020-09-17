@@ -29,10 +29,7 @@ class Collapsible(Directive):
 # Visit and depart methods come as a pair
 # Visit is not actually used in this case
 def visit_collapsible_html(self, node):
-    pass
-
-# Creates the collapsible
-def depart_collapsible_html(self, node):
+    
     #options = self.options
     # The title is represented in <summary> tags
     code = """<details><summary><b>"""
@@ -43,6 +40,10 @@ def depart_collapsible_html(self, node):
     code += """<p>here is some text</p>"""
     code += """</details>"""
     self.body.append(code)
+
+# Creates the collapsible
+def depart_collapsible_html(self, node):
+    pass
 
 
 def setup(app):
