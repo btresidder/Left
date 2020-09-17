@@ -1,15 +1,19 @@
 from docutils import nodes
 from docutils.parsers.rst import Directive
 
-class b(nodes.Element):
+class b(nodes.Structural, nodes.Element):
     pass
 
 class Collapsible(Directive):
 
     def run(self):
-        html_node = nodes.raw(text='''<b>hello world</b>''')
+        #html_node = nodes.raw(text='''<b>hello world</b>''')
+        
         #html_node = """<b>This Worked</b>"""
         #self.body.append(html_node)
+        
+        html_node = b()
+        
         return [html_node]
 
 def visit_collapsible_html(self, node):
