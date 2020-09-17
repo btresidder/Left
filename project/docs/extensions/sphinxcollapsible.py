@@ -35,11 +35,11 @@ class Collapsible(Directive):
         html_node += c()
         return [html_node]
 
-class Open_Collapsible(Directive):
-    pass
+##class Open_Collapsible(Directive):
+##    pass
 
-class Close_Collapsible(Directive):
-    pass
+##class Close_Collapsible(Directive):
+##    pass
 
 # Visit and depart methods come as a pair
 # Visit is not actually used in this case
@@ -59,18 +59,18 @@ def visit_collapsible_html(self, node):
 # Creates the collapsible
 def depart_collapsible_html(self, node):
     pass
-    
+
 def visit_col_html(self, node):
     pass
-    
+
 def depart_col_html(self, node):
     code = """</details>"""
-    self.body.append(code)
+    self.body.append(code) 
 
 def setup(app):
     app.add_directive("collapsible", Collapsible)
-    app.add_directive("open_collapsible", Open_Collapsible)
-    app.add_directive("close_collapsible", Close_Collapsible)
+    ##app.add_directive("open_collapsible", Open_Collapsible)
+    ##app.add_directive("close_collapsible", Close_Collapsible)
     app.add_node(b, html=(visit_collapsible_html, depart_collapsible_html))
     app.add_node(c, html=(visit_col_html, depart_col_html))
 
