@@ -17,7 +17,7 @@ Below is a collapsible box created by an extension.
 
    Here is some more text. Below is a auto-gen module
    
-   .. automodule:: factorial
-         :members:
+.. automodule:: factorial
+      :members:
 
 This text is not part of the collapsible
