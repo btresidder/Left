@@ -38,12 +38,13 @@ def visit_collapsible_html(self, node):
     
     # The content of the collapsible goes after the </summary>
     code += """<p>here is some text</p>"""
-    code += """</details>"""
+    
     self.body.append(code)
 
 # Creates the collapsible
 def depart_collapsible_html(self, node):
-    pass
+    code += """</details>"""
+    self.body.append(code)
 
 
 def setup(app):
