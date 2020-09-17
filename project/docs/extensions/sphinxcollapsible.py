@@ -1,7 +1,7 @@
 from docutils import nodes
 from docutils.parsers.rst import Directive
 
-class useless(docutils.nodes.Element):
+class useless():
     pass
 
 class Collapsible(Directive):
