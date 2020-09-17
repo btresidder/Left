@@ -1,7 +1,7 @@
 from docutils import nodes
 from docutils.parsers.rst import Directive
 
-class useless(nodes.Element):
+class n(nodes.Element):
     pass
 
 class Collapsible(Directive):
@@ -19,7 +19,7 @@ def depart_collapsible_html(self, node):
 
 def setup(app):
     app.add_directive("collapsible", Collapsible)
-    app.add_node(useless, html=(visit_collapsible_html, depart_collapsible_html))
+    app.add_node(b, html=(visit_collapsible_html, depart_collapsible_html))
 
     return {
         'version': '0.1',
