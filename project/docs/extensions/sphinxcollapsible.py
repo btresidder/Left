@@ -22,6 +22,10 @@ class Collapsible(Directive):
         global options
         options = self.options
         
+        global par
+        par = nodes.paragraph()
+        self.state.nested_parse(content, self.content_offset, par)
+        
         # Creates the class to call the other methods
         html_node = b()
         return [html_node]
@@ -38,6 +42,7 @@ def visit_collapsible_html(self, node):
     
     # The content of the collapsible goes after the </summary>
     code += """<p>here is some text</p>"""
+    code += par
     
     self.body.append(code)
 
