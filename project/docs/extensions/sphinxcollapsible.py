@@ -27,7 +27,7 @@ class Collapsible(Directive):
         global options
         options = self.options
         
-        global par
+        ##global par
         par = nodes.paragraph()
         self.state.nested_parse(self.content, self.content_offset, par)
         
