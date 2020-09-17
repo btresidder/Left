@@ -7,10 +7,10 @@ class b(nodes.Element):
 class Collapsible(Directive):
 
     def run(self):
-        paragraph_node = nodes.raw(text='''<b>hello world</b>''')
-        #html_node = """<b>This Worked</b>"""
+        #paragraph_node = nodes.raw(text='''<b>hello world</b>''')
+        html_node = """<b>This Worked</b>"""
         #self.body.append(html_node)
-        return [paragraph_node]
+        return [html_node]
 
 def visit_collapsible_html(self, node):
     self.body.append(self.starttag(node, 'b'))
