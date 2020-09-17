@@ -19,7 +19,8 @@ class Collapsible(Directive):
     
     def run(self):
         # Needed to get access to options
-        global options = self.options
+        global options
+        options = self.options
         
         # Creates the class to call the other methods
         html_node = b()
