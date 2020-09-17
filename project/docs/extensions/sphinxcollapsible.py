@@ -27,7 +27,8 @@ class Collapsible(Directive):
         global options
         options = self.options
         
-        ##global par
+        # This is the content of the collapsible
+        # nested_parse needed so other directives can be inside the collapsible
         par = nodes.paragraph()
         self.state.nested_parse(self.content, self.content_offset, par)
         
