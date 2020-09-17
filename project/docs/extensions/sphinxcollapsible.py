@@ -50,7 +50,7 @@ def visit_collapsible_html(self, node):
 def depart_collapsible_html(self, node):
     pass
 
-def optimistic(nodes.Structural, nodes.Element, self, node)
+def optimistic(self, node)
     code = """</details>"""
     self.body.append(code)
 
