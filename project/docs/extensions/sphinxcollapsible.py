@@ -13,8 +13,12 @@ def visit_collapsible_html(self, node):
     pass
 
 def depart_collapsible_html(self, node):
-    code = """<b>hello world</b>"""
-    code += """<details><summary>Dropdown Title</summary><p>here is some text</p></details>"""
+    code = """<details><summary><b>"""
+    code += """Dropdown Title"""
+    code += """</b></summary>"""
+    
+    code += """<p>here is some text</p>"""
+    code += """</details>"""
     self.body.append(code)
 
 
