@@ -7,11 +7,7 @@ This is regular text written in the .rst file.
 Below is a collapsible box created by an extension.
 
 .. collapsible::
-   :title: This is the title
-
-   =======
-   Heading
-   =======
+   :title: Factorial Module
 
    This is some regular text inside the collapsible
 
@@ -19,6 +15,9 @@ Below is a collapsible box created by an extension.
 
       print("hello world")
 
-   Here is some more text.
+   Here is some more text. Below is a auto-gen module
+   
+   .. automodule:: factorial
+         :members:
 
 This text is not part of the collapsible
