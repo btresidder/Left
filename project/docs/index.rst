@@ -13,7 +13,6 @@ Contents:
    :caption: Contents:
 
    left
-   collapsible
 
 
 Indices and tables
