@@ -22,7 +22,7 @@ def visit_collapsible_html(self, node):
 
 def depart_collapsible_html(self, node):
     #self.body.append('test</b>')
-    code = """<p>hello world</p>"""
+    code = """<b>hello world</b>"""
     self.body.append(code)
 
 
