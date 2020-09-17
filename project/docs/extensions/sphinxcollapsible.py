@@ -9,11 +9,11 @@ class b(nodes.Structural, nodes.Element):
 
 # The main class
 class Collapsible(Directive):
-    # Directives.unchanged means u get raw value from the rst
-    option_spec = {'title': directives.unchanged,}
-    required_arguments = 1
+    required_arguments = 0
     optional_arguments = 0
     final_argument_whitespace = True
+    # Directives.unchanged means u get raw value from the rst
+    option_spec = {'title': directives.unchanged,}
     has_content = True
     add_index = True
     
