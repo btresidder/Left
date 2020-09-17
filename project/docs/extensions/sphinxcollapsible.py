@@ -25,10 +25,11 @@ class Collapsible(Directive):
         global par
         par = nodes.paragraph()
         self.state.nested_parse(self.content, self.content_offset, par)
-        print(par)
+        print("par is:" + par)
         # Creates the class to call the other methods
         html_node = b()
-        return [html_node]
+        html_node += par
+        return [html_node + optimistic()]
 
 # Visit and depart methods come as a pair
 # Visit is not actually used in this case
@@ -47,9 +48,11 @@ def visit_collapsible_html(self, node):
 
 # Creates the collapsible
 def depart_collapsible_html(self, node):
+    pass
+
+def optimistic(nodes.Structural, nodes.Element, self, node)
     code = """</details>"""
     self.body.append(code)
-
 
 def setup(app):
     app.add_directive("collapsible", Collapsible)
