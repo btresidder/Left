@@ -7,6 +7,9 @@ from docutils.parsers.rst import directives
 class b(nodes.Structural, nodes.Element):
     pass
 
+class c(nodes.Structural, nodes.Element):
+    pass
+
 # The main class
 class Collapsible(Directive):
     required_arguments = 0
@@ -29,7 +32,8 @@ class Collapsible(Directive):
         # Creates the class to call the other methods
         html_node = b()
         html_node += par
-        return [html_node + optimistic()]
+        html_node += c()
+        return [html_node]
 
 # Visit and depart methods come as a pair
 # Visit is not actually used in this case
@@ -49,14 +53,18 @@ def visit_collapsible_html(self, node):
 # Creates the collapsible
 def depart_collapsible_html(self, node):
     pass
-
-def optimistic(self, node)
+    
+def visit_col_html(self, node):
+    pass
+    
+def depart_col_html(self, node):
     code = """</details>"""
     self.body.append(code)
 
 def setup(app):
     app.add_directive("collapsible", Collapsible)
     app.add_node(b, html=(visit_collapsible_html, depart_collapsible_html))
+    app.add_node(c, html=(visit_col_html, depart_col_html))
 
     return {
         'version': '0.1',
