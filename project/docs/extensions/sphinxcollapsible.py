@@ -6,10 +6,10 @@ class useless(nodes.Element):
 
 class Collapsible(Directive):
 
-    def run(self, node):
+    def run(self):
         paragraph_node = nodes.paragraph(text='<b>hello world</b>')
-        html_node = """<b>This Worked</b>"""
-        self.body.append(html_node)
+        #html_node = """<b>This Worked</b>"""
+        #self.body.append(html_node)
         return [paragraph_node]
 
 def visit_collapsible_html(self, node):
