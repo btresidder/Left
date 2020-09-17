@@ -6,7 +6,7 @@ from docutils.parsers.rst import directives
 # No idea why this class has to exist but its how sphinx works
 class b(nodes.Structural, nodes.Element):
     pass
-options
+
 # The main class
 class Collapsible(Directive):
     required_arguments = 0
@@ -19,7 +19,7 @@ class Collapsible(Directive):
     
     def run(self):
         # Needed to get access to options
-        options = self.options
+        global options = self.options
         
         # Creates the class to call the other methods
         html_node = b()
