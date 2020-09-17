@@ -24,7 +24,7 @@ class Collapsible(Directive):
         
         global par
         par = nodes.paragraph()
-        self.state.nested_parse(content, self.content_offset, par)
+        self.state.nested_parse(self.content, self.content_offset, par)
         
         # Creates the class to call the other methods
         html_node = b()
