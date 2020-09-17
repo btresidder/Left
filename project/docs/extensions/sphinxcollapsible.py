@@ -1,5 +1,6 @@
 from docutils import nodes
 from docutils.parsers.rst import Directive
+from docutils.parsers.rst import directives
 
 # Needed to run the visit and depart methods
 # No idea why this class has to exist but its how sphinx works
