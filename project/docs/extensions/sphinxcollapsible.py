@@ -7,7 +7,7 @@ class useless(nodes.Element):
 class Collapsible(Directive):
 
     def run(self):
-        paragraph_node = nodes.raw(html='<b>hello world</b>')
+        paragraph_node = nodes.raw(html="""<b>hello world</b>""")
         #html_node = """<b>This Worked</b>"""
         #self.body.append(html_node)
         return [paragraph_node]
