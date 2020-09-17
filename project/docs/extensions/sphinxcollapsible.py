@@ -43,7 +43,7 @@ def visit_collapsible_html(self, node):
 
 # Creates the collapsible
 def depart_collapsible_html(self, node):
-    code += """</details>"""
+    code = """</details>"""
     self.body.append(code)
 
 
