@@ -48,5 +48,8 @@ below is a call to the collapsible extension:
 
    This is some text inside the collapsible
 
+   .. code-block:: python
+
+      print("hellow world")
 
 this is after the extension call
