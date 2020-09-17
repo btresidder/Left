@@ -6,7 +6,7 @@ from docutils.parsers.rst import directives
 # No idea why this class has to exist but its how sphinx works
 class b(nodes.Structural, nodes.Element):
     pass
-options = ""
+options
 # The main class
 class Collapsible(Directive):
     required_arguments = 0
