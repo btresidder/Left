@@ -11,9 +11,10 @@ Contents:
 .. toctree::
 
    :caption: Contents:
-   
+
+   index
    left
-   randompage
+   collapsible
 
 
 Indices and tables
