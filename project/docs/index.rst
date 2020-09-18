@@ -12,6 +12,7 @@ Contents:
 
    :caption: Contents:
 
+   collapsible
    index
    left
 
