@@ -12,8 +12,7 @@ Contents:
 
    :caption: Contents:
 
-   collapsible
-   index
+   randompage
    left
 
 
