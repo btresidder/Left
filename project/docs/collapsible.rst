@@ -6,8 +6,7 @@ This is an investigation into collapsible text boxes for sphinx.
 This is regular text written in the .rst file.
 Below is a collapsible box created by an extension.
 
-factorial main
-==============
+
 
 .. collapsible::
    :title: Factorial Module
@@ -19,6 +18,9 @@ factorial main
       print("hello world")
 
    Here is some more text. Below is a auto-gen module
+   
+   factorial main
+   ==============
    
    .. automodule:: factorial
          :members:
