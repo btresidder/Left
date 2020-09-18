@@ -14,7 +14,6 @@ Contents:
 
    index
    left
-   collapsible
 
 
 Indices and tables

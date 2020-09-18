@@ -3,11 +3,11 @@ from docutils.parsers.rst import Directive
 from docutils.parsers.rst import directives
 
 # Class represents the node used to start the <details> tag
-class b(nodes.Structural, nodes.Element):
+class start(nodes.Structural, nodes.Element):
     pass
 
 # Class represents the node used to end the <details> tag
-class c(nodes.Structural, nodes.Element):
+class finish(nodes.Structural, nodes.Element):
     pass
 
 # The main class
@@ -33,9 +33,9 @@ class Collapsible(Directive):
         self.state.nested_parse(self.content, self.content_offset, par)
         
         # Creates the classes to call the other methods
-        html_node = b()
+        html_node = start()
         html_node += par
-        html_node += c()
+        html_node += finish()
         
         return [html_node]
 
@@ -65,8 +65,8 @@ def depart_col_html(self, node):
 # Setups up directives and nodes
 def setup(app):
     app.add_directive("collapsible", Collapsible)
-    app.add_node(b, html=(visit_collapsible_html, depart_collapsible_html))
-    app.add_node(c, html=(visit_col_html, depart_col_html))
+    app.add_node(start, html=(visit_collapsible_html, depart_collapsible_html))
+    app.add_node(finish, html=(visit_col_html, depart_col_html))
 
     return {
         'version': '0.1',
