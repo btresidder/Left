@@ -25,3 +25,17 @@ Factorial Module
          :members:
 
 This text is not part of the collapsible
+
+
+.. collapsible::
+   :title: Collapsible 2
+   
+   here is some stuff in the collapsible.
+   
+   .. code-block:: python
+   
+      print("collapsible 2")
+      
+   end
+   
+this is after collapsible 2
