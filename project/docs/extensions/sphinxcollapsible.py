@@ -2,6 +2,9 @@ from docutils import nodes
 from docutils.parsers.rst import Directive
 from docutils.parsers.rst import directives
 
+options = [] # Stores titles
+index = 0    # Counter for titles list
+
 # Class represents the node used to start the <details> tag
 class start(nodes.Structural, nodes.Element):
     pass
@@ -25,7 +28,7 @@ class Collapsible(Directive):
         
         # Needed to get access to options
         global options
-        options = self.options
+        options.append(self.options['title'])
         
         # This is the content of the collapsible
         # nested_parse needed so other directives can be inside the collapsible
@@ -44,10 +47,12 @@ class Collapsible(Directive):
 # The <details> tag is left open so rst (including directives) can be inserted
 def visit_collapsible_html(self, node):
 
+    global index
+    
     # Collapsible is made with <details> tags
     # The title is represented in <summary> tags
     code = """<details style="margin:0 0 24px 25px;"><summary style="margin:0 0 0 -20px;"><b>"""
-    code += options["title"]
+    code += options[index]
     code += """</b></summary>"""
     self.body.append(code)
 
