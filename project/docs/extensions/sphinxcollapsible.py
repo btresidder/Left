@@ -54,6 +54,9 @@ def visit_collapsible_html(self, node):
     code = """<details style="margin:0 0 24px 25px;"><summary style="margin:0 0 0 -20px;"><b>"""
     code += options[index]
     code += """</b></summary>"""
+    
+    index += 1
+    
     self.body.append(code)
 
 def depart_collapsible_html(self, node):
