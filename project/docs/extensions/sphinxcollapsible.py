@@ -75,7 +75,7 @@ def depart_col_html(self, node):
 def build_type(app):
     print("builder is: ")
     print(app.builder)
-    if app.builder == sphinx.builders.latex:
+    if app.builder == sphinx.builders.latex.LaTeXBuilder:
         print ("this is latex")
     print("done")
 
