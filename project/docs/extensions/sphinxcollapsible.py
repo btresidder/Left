@@ -1,6 +1,7 @@
 from docutils import nodes
 from docutils.parsers.rst import Directive
 from docutils.parsers.rst import directives
+from sphinx.builders import latex
 
 options = [] # Stores titles
 index = 0    # Counter for titles list
@@ -73,6 +74,8 @@ def depart_col_html(self, node):
 def build_type(app):
     print("builder is: ")
     print(app.builder)
+    if app.builder == sphinx.builder.latex:
+        print ("this is latex")
     print("done")
 
 # Setups up directives and nodes
