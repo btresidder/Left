@@ -28,7 +28,7 @@ class Collapsible(Directive):
     add_index = True
     
     def run(self):
-        
+        print("====Running collapsible=====")
         # Needed to get access to options
         global options
         options.append(self.options['title'])
