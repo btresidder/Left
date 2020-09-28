@@ -79,6 +79,7 @@ def depart_col_html(self, node):
 def build_type(app):
     print("builder is: ")
     print(app.builder.name)
+    global isLatex
 
     if app.builder.name != "latex":
         print ("this is latex")
