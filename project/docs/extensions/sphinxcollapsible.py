@@ -6,7 +6,7 @@ from sphinx.builders import latex
 
 options = [] # Stores titles
 index = 0    # Counter for titles list
-isLatex = True
+isLatex = False
 
 # Class represents the node used to start the <details> tag
 class start(nodes.Structural, nodes.Element):
@@ -89,7 +89,7 @@ def setup(app):
     app.add_directive("collapsible", Collapsible)
     app.add_node(start, html=(visit_collapsible_html, depart_collapsible_html))
     app.add_node(finish, html=(visit_col_html, depart_col_html))
-    #app.connect('builder-inited', build_type)
+    app.connect('builder-inited', build_type)
 
     return {
         'version': '0.1',
