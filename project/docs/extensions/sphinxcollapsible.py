@@ -75,8 +75,8 @@ def depart_col_html(self, node):
 def build_type(app):
     print("builder is: ")
     print(app.builder)
-    print(type(obj))
-    if type(app.builder) == 1:
+
+    if type(app.builder) == "<readthedocs_ext.readthedocs.ReadtheDocsBuilder object at 0x7fa93e933940>":
         print ("this is latex")
     print("done")
 
