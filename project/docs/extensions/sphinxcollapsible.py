@@ -77,8 +77,8 @@ def build_type(app):
     print(app.builder.name)
 
     #print(isinstance(app.builder, readthedocs_ext.readthedocs.ReadtheDocsBuilder))
-    #if isinstance(app.builder, readthedocs_ext.readthedocs.ReadtheDocsBuilder):
-    #    print ("this is latex")
+    if app.builder.name == "latex":
+        print ("this is latex")
     print("done")
 
 # Setups up directives and nodes
