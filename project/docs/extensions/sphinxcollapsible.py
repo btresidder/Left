@@ -6,6 +6,7 @@ from sphinx.builders import latex
 
 options = [] # Stores titles
 index = 0    # Counter for titles list
+isLatex = False
 
 # Class represents the node used to start the <details> tag
 class start(nodes.Structural, nodes.Element):
@@ -38,9 +39,12 @@ class Collapsible(Directive):
         self.state.nested_parse(self.content, self.content_offset, par)
         
         # Creates the classes to call the other methods
-        html_node = start()
-        html_node += par
-        html_node += finish()
+        if !isLatex:
+            html_node = start()
+            html_node += par
+            html_node += finish()
+        else:
+            html_node = par
         
         return [html_node]
 
@@ -76,10 +80,9 @@ def build_type(app):
     print("builder is: ")
     print(app.builder.name)
 
-    #print(isinstance(app.builder, readthedocs_ext.readthedocs.ReadtheDocsBuilder))
     if app.builder.name == "latex":
         print ("this is latex")
-    print("done")
+        isLatex = True
 
 # Setups up directives and nodes
 def setup(app):
