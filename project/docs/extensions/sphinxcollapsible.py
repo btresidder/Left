@@ -86,6 +86,9 @@ def build_type(app):
 
 # Setups up directives and nodes
 def setup(app):
+    print("in setup")
+    print("app.builder is: ")
+    print(app.builder)
     app.add_directive("collapsible", Collapsible)
     app.add_node(start, html=(visit_collapsible_html, depart_collapsible_html))
     app.add_node(finish, html=(visit_col_html, depart_col_html))
