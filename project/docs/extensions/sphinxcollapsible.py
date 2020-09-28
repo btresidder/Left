@@ -78,7 +78,7 @@ def build_type(app):
     s = ""
     s += type(app.builder)
     print(s[:47])
-    if s[:47] == "<readthedocs_ext.readthedocs.ReadtheDocsBuilder"":
+    if s[:47] == "<readthedocs_ext.readthedocs.ReadtheDocsBuilder":
         print ("this is latex")
     print("done")
 
