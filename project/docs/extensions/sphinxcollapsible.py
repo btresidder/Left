@@ -39,6 +39,7 @@ class Collapsible(Directive):
         self.state.nested_parse(self.content, self.content_offset, par)
         
         # Creates the classes to call the other methods
+        # Only adds html if the build is not LaTeX
         if isLatex == False:
             html_node = start()
             html_node += par
@@ -75,14 +76,13 @@ def visit_col_html(self, node):
 def depart_col_html(self, node):
     code = """</details>"""
     self.body.append(code) 
-    
+
+# Determines if the build type is LaTeX (pdf)
 def build_type(app):
-    print("builder is: ")
-    print(app.builder.name)
+
     global isLatex
 
     if app.builder.name == "latex":
-        print ("this is latex")
         isLatex = True
 
 # Setups up directives and nodes
