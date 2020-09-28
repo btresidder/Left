@@ -74,7 +74,7 @@ def depart_col_html(self, node):
     
 def build_type(app):
     print("builder is: ")
-    print(app.builder)
+    print(app.builder.name)
 
     print(isinstance(app.builder, readthedocs_ext.readthedocs.ReadtheDocsBuilder))
     if isinstance(app.builder, readthedocs_ext.readthedocs.ReadtheDocsBuilder):
