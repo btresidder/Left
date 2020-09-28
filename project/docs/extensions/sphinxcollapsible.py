@@ -6,7 +6,7 @@ from sphinx.builders import latex
 
 options = [] # Stores titles
 index = 0    # Counter for titles list
-isLatex = False
+isLatex = True
 
 # Class represents the node used to start the <details> tag
 class start(nodes.Structural, nodes.Element):
@@ -80,9 +80,9 @@ def build_type(app):
     print("builder is: ")
     print(app.builder.name)
 
-    if app.builder.name == "latex":
+    if app.builder.name != "latex":
         print ("this is latex")
-        isLatex = True
+        isLatex = False
 
 # Setups up directives and nodes
 def setup(app):
