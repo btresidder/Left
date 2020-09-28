@@ -1,3 +1,4 @@
+import sphinx
 from docutils import nodes
 from docutils.parsers.rst import Directive
 from docutils.parsers.rst import directives
@@ -74,7 +75,7 @@ def depart_col_html(self, node):
 def build_type(app):
     print("builder is: ")
     print(app.builder)
-    if app.builder == sphinx.builder.latex:
+    if app.builder == sphinx.builders.latex:
         print ("this is latex")
     print("done")
 
