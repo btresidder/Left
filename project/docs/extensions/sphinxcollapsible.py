@@ -78,7 +78,8 @@ def build_type(app):
     print("builder type is: ")
     print(type(app.builder))
     print("object type is: ")
-    print(type(sphinx.builders.latex.LaTeXBuilders))
+    obj = sphinx.builders.latex.LaTeXBuilders()
+    print(type(obj))
     if type(app.builder) == type(sphinx.builders.latex.LaTeXBuilder):
         print ("this is latex")
     print("done")
