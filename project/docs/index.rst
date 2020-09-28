@@ -14,6 +14,7 @@ Contents:
 
    randompage
    left
+   collapsible
 
 
 Indices and tables
