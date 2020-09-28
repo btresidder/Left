@@ -3,6 +3,7 @@ from docutils import nodes
 from docutils.parsers.rst import Directive
 from docutils.parsers.rst import directives
 from sphinx.builders import latex
+from sphinx.builders.latex import LaTeXBuilders
 
 options = [] # Stores titles
 index = 0    # Counter for titles list
