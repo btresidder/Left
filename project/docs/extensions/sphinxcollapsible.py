@@ -39,7 +39,7 @@ class Collapsible(Directive):
         self.state.nested_parse(self.content, self.content_offset, par)
         
         # Creates the classes to call the other methods
-        if !isLatex:
+        if isLatex == False:
             html_node = start()
             html_node += par
             html_node += finish()
