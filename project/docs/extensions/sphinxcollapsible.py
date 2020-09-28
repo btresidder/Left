@@ -88,7 +88,7 @@ def build_type(app):
 def setup(app):
     app.add_directive("collapsible", Collapsible)
     #app.add_node(start, html=(visit_collapsible_html, depart_collapsible_html))
-    #app.add_node(finish, html=(visit_col_html, depart_col_html))
+    app.add_node(finish, html=(visit_col_html, depart_col_html))
     #app.connect('builder-inited', build_type)
 
     return {
